@@ -1,0 +1,315 @@
+
+//@theme: #4A51FF;
+@theme: var(--themeColor1);
+// 默认的主题颜色
+@themeColor1: var(--themeColor1);
+@themeColor2: var(--themeColor2);
+@themeColor3: var(--themeColor3);
+@themeColor4: var(--themeColor4);
+@themeColor5: var(--themeColor5);
+@themeColor6: var(--themeColor6);
+@themeColor7: var(--themeColor7);
+@textColor1: var(--textColor1);
+@textColor2: var(--textColor2);
+
+:root {
+  --animate-duration: 0.3s;
+  --animate-delay: 1s;
+  --animate-repeat: 1;
+  --borderColor: #d6d6db; //全局统一边框默认颜色
+  --hoverBgColor: #e3e3ff; //全局统一悬浮默认底色
+  --borderRadius: 8px; //全局统一边框圆角
+  --bgColor: #fafafb; //全局统一背景色
+  --primaryColor: #4A51FF;
+}
+* {
+  box-sizing: border-box;
+}
+
+// 主体面板
+.panelMain{
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+  h1{
+    height: 59px;
+  }
+  .filter {
+    //height: 32px;
+  }
+  .panel-box{
+    height: calc(100% - 136px);
+    //height: calc(100% - 21vh);
+  }
+}
+
+// 默认ant design 表格滚动条美化
+.custom-ant-table-body {
+  // 滚动条背景颜色
+  :deep(.ant-table-body)::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: #c1c1c1;
+  }
+
+  // 滚动条颜色
+  :deep(.ant-table-body)::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #c1c1c1;
+  }
+
+  :deep(.ant-table-body)::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    //-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+    border-radius: 0;
+    background: #f4f4f4;
+  }
+  :deep(.ant-table-body):hover {
+    :deep(.ant-table-body)::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 0;
+      //background: @primary-color;
+      background: #c1c1c1;
+    }
+
+    :deep(.ant-table-body)::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      //-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+      border-radius: 0;
+      background: #f4f4f4;
+    }
+  }
+
+}
+
+// 自定ant design 日期样式
+.custom-ant-picker{
+  :deep(.ant-picker){
+    background: none;
+  }
+}
+
+// 自定义ant design 单选样式
+.custom-ant-radio-group{
+  :deep(.ant-radio-group){
+    .ant-radio-button-wrapper {
+      background: none;
+    }
+  }
+}
+
+.beauty-scroll {
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    background: #c1c1c1;
+  }
+
+  &::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    //-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+    border-radius: 0;
+    background: #f4f4f4;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 0;
+      //background: @primary-color;
+      background: #c1c1c1;
+    }
+
+    &::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      //-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+      border-radius: 0;
+      background: #f4f4f4;
+    }
+  }
+}
+
+.overflow-scroll {
+  overflow-y: scroll;
+  //// 默认不展示
+  //&::-webkit-scrollbar {
+  //  width: 0px; /*隐藏滚动条*/
+  //}
+  //// 鼠标经过时出现滚动条
+  //&:hover {
+  //  &::-webkit-scrollbar {
+  //    /*滚动条整体样式*/
+  //    width: 6px;
+  //    height: 8px;
+  //    border-radius: 5px;
+  //  }
+  //}
+  //&::-webkit-scrollbar {
+  //  /*滚动条整体样式*/
+  //  width: 6px;
+  //  height: 8px;
+  //  border-radius: 5px;
+  //}
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+
+  &::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 0;
+    background: #c1c1c1;
+  }
+
+  &::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    //-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+    border-radius: 0;
+    background: #f4f4f4;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 0;
+      //background: @primary-color;
+      background: #c1c1c1;
+    }
+
+    &::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      //-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0);
+      border-radius: 0;
+      background: #f4f4f4;
+    }
+  }
+}
+
+.bkclear {
+  &:after,
+  &:before {
+    display: block;
+    clear: both;
+    content: '';
+  }
+}
+
+.inlineBlock(@var:middle) {
+  display: inline-block;
+  vertical-align: @var;
+}
+
+.inlineBlock {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.overflowText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.multiOverflowText(@num:2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @num;
+  -webkit-box-orient: vertical;
+}
+.colItem(@num) {
+  &.colItem@{num} {
+    flex: @num;
+  }
+}
+.statusIcon {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  margin-right: 8px;
+  vertical-align: 2px;
+  &.green {
+    background-color: #3ec73e;
+  }
+  &.gray {
+    background-color: #bfbfbf;
+  }
+  &.blue {
+    background-color: #0074fe;
+  }
+  &.red {
+    background-color: #f4464f;
+  }
+  &.yellow {
+    background-color: #febb37;
+  }
+}
+.theme {
+  color: @theme;
+  &.pointer {
+    cursor: pointer;
+  }
+}
+
+
+/**
+ * 单行文本溢出变...
+ */
+.overflowText {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+// flex 水平垂直居中
+.flexCenter{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+// flex 水平对其，垂直居中
+.flexBetween{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.w-20 {
+  width: 20%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-35 {
+  width: 35%;
+}
+.w-60 {
+  width: 60%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.textButton {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: transparent;
+  color: #477aed;
+  cursor: pointer;
+  font-size: 14px;
+  &:hover {
+    background: fade(#dee0e7, 50);
+  }
+}
