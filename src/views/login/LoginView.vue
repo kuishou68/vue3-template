@@ -5,9 +5,6 @@
             </div>
         </div>
            <div class="card">
-                <div class="left">
-                </div>
-
                 <div class="right">
                     <div class="form">
                         <div class="titleText" @click="login">账号登录</div>
@@ -21,10 +18,10 @@
                             @finishFailed="handleFinishFailed"
                         >
                             <a-form-item has-feedback label="" name="userName">
-                                <a-input v-model:value="formState.userName" size="large" autocomplete="off" placeholder="请输入用户名"/>
+                                <a-input v-model:value="formState.userName" size="large" autocomplete="off" placeholder="请输入用户名 admin"/>
                             </a-form-item>
                             <a-form-item has-feedback label="" name="password">
-                                <a-input-password v-model:value="formState.password" size="large" placeholder="请输入密码"/>
+                                <a-input-password v-model:value="formState.password" size="large" placeholder="请输入密码 123"/>
                             </a-form-item>
                             <div class="remember" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
                                 <a-checkbox v-model:checked="remember">记住登录信息</a-checkbox>
@@ -36,7 +33,7 @@
                 </div>
             </div>
         <div class="login-footer">
-            <div class="copyright">版权所有 Copyright(©)1999-{{ new Date().getFullYear() }} </div>
+<!--            <div class="copyright">版权所有 Copyright(©)1999-{{ new Date().getFullYear() }} </div>-->
         </div>
     </div>
     <!--   修改密码 -->
@@ -110,19 +107,13 @@ const handleValidate = (...args) => {
 @import (reference) "@/utils/common";
 
 .loginView {
-    //min-width: 800px;
-    //min-height: 800px;
     height: 100vh;
-    //width: 100vw;
     width: 100%;
+    background-image: url("@/assets/images/img.png");
     background-repeat: no-repeat;
     background-size: cover;
-    //padding-bottom: 100px;
     display: grid;
     align-items: center;
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: space-evenly;
     .header {
         width: 75%;
         margin: 0 auto;
@@ -166,26 +157,18 @@ const handleValidate = (...args) => {
     }
 
     .card {
-        @cardWidth: 35%;
         width: 75%;
         height: 100%;
-        max-width: 1300px;
-        margin: 0 auto;
+        max-width: 600px;
+        //margin: 0 auto;
+        margin: auto 100px;
         background: #FFFFFF;
         box-shadow: 0 8px 16px 0 rgba(181, 188, 201, 0.19);
         border-radius: 16px;
-        padding: 3% 5% 1% 3%;
-        //padding: 106px 130px 59px 39px;
+        padding: 3%;
 
-        .left{
-          .inlineBlock();
-          width: calc(~"100%" - @cardWidth);
-            .img{
-              width: 75%;
-            }
-        }
         .right{
-            width: @cardWidth;
+            width: 100%;
           .inlineBlock();
             .img{
               width: 100%;

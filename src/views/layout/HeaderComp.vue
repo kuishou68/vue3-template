@@ -99,9 +99,10 @@ const onPressTheme = (e) =>{
 const outLogin = () => {
     removeStorage("theme");
     removeAuthorization();
+    $router.push({name: 'login'});
     setTimeout(() => {
-        $router.push({name: 'login'});
-        window.location.reload()
+
+        // window.location.reload()
     }, 1000);
 }
 </script>

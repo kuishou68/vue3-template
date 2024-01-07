@@ -4,9 +4,6 @@
         <a-modal v-model:open="showModal" wrapClassName="editPasswordDialog" title="修改密码" okText="提交" cancelText="取消" :closable="false" width="30%"
                  @cancel="closeDialog" @ok="handleOk">
             <a-form ref="formRef" name="basic" :rules="formRules" :label-col="{ span: 6 }" :wrapper-col="{ span: 16 }" layout="horizontal" :model="formState" >
-                <a-form-item has-feedback label="连锁代码" name="custId">
-                    <a-input v-model:value="formState.custId" placeholder="请选择连锁代码" style="width: 340px;"></a-input>
-                </a-form-item>
                 <a-form-item has-feedback label="用户名" name="userName">
                     <a-input v-model:value="formState.userName" autocomplete="off" placeholder="请输入用户名" style="width: 340px;"/>
                 </a-form-item>
