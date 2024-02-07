@@ -1,0 +1,53 @@
+{
+  "name": "vite-plugin-chunk-split",
+  "version": "0.5.0",
+  "description": "A vite plugin for better chunk split",
+  "author": "sanyuan0704",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "url": "git+ssh://git@github.com/sanyuan0704/vite-plugin-chunk-split.git"
+  },
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "vite",
+    "code-splitting"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.18.9",
+    "@types/resolve": "^1.20.5",
+    "rollup": "^4.4.0",
+    "typescript": "^5.2.2",
+    "unbuild": "^2.0.0",
+    "vite": "5.0.0-beta.18",
+    "vitest": "1.0.0-beta.4"
+  },
+  "bugs": {
+    "url": "https://github.com/sanyuan0704/vite-plugin-chunk-split/issues"
+  },
+  "homepage": "https://github.com/sanyuan0704/vite-plugin-chunk-split#readme",
+  "dependencies": {
+    "es-module-lexer": "^1.4.1",
+    "import-meta-resolve": "^4.0.0",
+    "magic-string": "^0.30.5"
+  },
+  "peerDependencies": {
+    "vite": "^4 || ^5"
+  }
+}

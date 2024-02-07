@@ -68,13 +68,6 @@ function initRouter() {
                 }
             },
             {
-                path: '/lock',
-                name: 'lock',
-                component: () => {
-                    return import('@/views/login/LockScreenView.vue')
-                }
-            },
-            {
                 path: '/:pathMatch(.*)*',
                 redirect: 'login'
             }

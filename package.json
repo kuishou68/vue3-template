@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build --mode production && node sftp.prod.js",
+    "build": "vite build --mode production",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
@@ -26,6 +26,7 @@
     "pinia-plugin-persist": "^1.0.0",
     "qiniu": "^7.10.0",
     "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-visualizer": "^5.12.0",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5",
     "xlsx": "^0.18.5",
@@ -42,6 +43,7 @@
     "prettier": "^3.0.3",
     "ssh2-sftp-client": "^9.1.0",
     "unplugin-vue-components": "^0.25.2",
-    "vite": "^4.4.11"
+    "vite": "^4.4.11",
+    "vite-plugin-chunk-split": "^0.5.0"
   }
 }
